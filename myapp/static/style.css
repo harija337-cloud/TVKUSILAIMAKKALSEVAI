@@ -1,0 +1,940 @@
+body.splash-page{
+    margin: 0;
+    height: 100vh;
+    background: url('bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    border: 4px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+h1{
+    color: black;
+    font-size: 26px;
+    font-weight: 900;
+    margin-top: 20px;
+    background: rgba(225,225,225,0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+h2{
+    color: black;
+    font-size: 16px;
+    background: rgba(225,225,225,0.8);
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+
+}
+/* ============================= */
+/* BASIC */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    overflow: hidden;
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+
+.tvk-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.tvk-header {
+    height: 65px;
+
+    background: #8b0000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    color: white;
+}
+
+
+/* LOGO AREA */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ROUND TVK LOGO */
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #ffd400;
+
+    color: #8b0000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* TITLE */
+
+.logo-area h1 {
+    font-size: 22px;
+    position: relative;
+    top: -13px;
+}
+
+.logo-area h1 span {
+    background: #ffd400;
+    color: #8b0000;
+
+    padding: 4px 12px;
+
+    border: 2px solid #8b0000;
+
+    border-radius: 14px 6px 14px 6px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin-left: 3px;
+}
+
+
+/* NAVIGATION */
+
+.tvk-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.tvk-header nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tvk-header nav a:hover {
+    color: #ffd400;
+}
+
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+    position: relative;
+
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px 45px;
+
+    background: #fff6c9;
+
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 120px;
+    height: 8px;
+
+    background: #d90000;
+
+    box-shadow:
+        0 12px 0 #ffd400,
+        0 24px 0 #d90000;
+
+    border-radius: 0 20px 20px 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    width: 120px;
+    height: 8px;
+
+    background: #d90000;
+
+    box-shadow:
+        0 -12px 0 #ffd400,
+        0 -24px 0 #d90000;
+
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+   
+/* ============================= */
+/* HERO CONTENT */
+/* ============================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    text-align: center;
+
+    padding-left: 60px;
+}
+
+
+/* MAIN TEXT */
+
+.hero-content h2 {
+    color: #8b0000;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    line-height: 1.45;
+
+    text-align: center;
+
+    margin-bottom: 18px;
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* COMMON BUTTON */
+
+.complaint-btn,
+.status-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 52px;
+
+    padding: 8px 14px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #000;
+
+    border: 1px solid #8b0000;
+}
+
+
+/* COMPLAINT - RED */
+
+.complaint-btn {
+    background: #e00000;
+}
+
+
+/* STATUS - YELLOW */
+
+.status-btn {
+    background: #ffd400;
+}
+
+
+/* BUTTON ICON */
+
+.button-icon {
+    font-size: 18px;
+}
+
+
+/* ARROW */
+
+.arrow {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* ROUND TVK IMAGE */
+/* ============================= */
+.tvk-image {
+    position: relative;
+    z-index: 3;
+
+    width: 145px;
+    height: 145px;
+
+    margin-left: 10px;
+    margin-top: -50px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 4px solid #d90000;
+}
+
+.tvk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================= */
+/* SERVICES */
+/* ============================= */
+
+.services {
+
+    padding: 15px 30px;
+
+    text-align: center;
+
+    background: #fff;
+}
+
+
+.services > h2 {
+
+    color: #8b0000;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+/* SERVICE CONTAINER */
+
+.service-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+
+    width: 250px;
+
+    min-height: 120px;
+
+    padding: 20px;
+
+    background: #fffdf0;
+
+    border-radius: 15px;
+
+    border: 1px solid #eee;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+
+    text-align: center;
+}
+
+
+/* SERVICE ICON */
+
+.service-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* ICON COLORS */
+
+.service-icon.yellow {
+
+    background: #ffd400;
+
+    color: #8b0000;
+}
+
+.service-icon.red {
+
+    background: #e00000;
+
+    color: white;
+}
+
+.service-icon.green {
+
+    background: #35a853;
+
+    color: white;
+}
+
+
+/* SERVICE TITLE */
+
+.service-card h3 {
+
+    color: #8b0000;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+/* SERVICE TEXT */
+
+.service-card p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+/* ============================= */
+/* BOTTOM MESSAGE */
+/* ============================= */
+
+.bottom-message {
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: #8b0000;
+
+    color: white;
+}
+
+
+.bottom-message h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.bottom-message p {
+
+    font-size: 15px;
+
+    color: #ffd400;
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .tvk-header {
+
+        height: auto;
+
+        padding: 10px 12px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .logo-area h1 {
+
+        font-size: 18px;
+    }
+
+
+    .tvk-header nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .tvk-header nav a {
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+
+        min-height: 220px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 25px 15px;
+    }
+
+
+    .hero-content {
+
+        padding-left: 0;
+
+        order: 1;
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 19px;
+    }
+
+
+    .hero-buttons {
+
+        flex-wrap: wrap;
+    }
+
+
+    .tvk-image {
+
+        order: 2;
+
+        width: 120px;
+
+        height: 120px;
+
+        margin: 20px 0 0;
+    }
+
+
+    .service-card {
+
+        width: 90%;
+    }
+
+}
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-y: auto !important;
+}
+
+.tvk-container {
+    width: 100% !important;
+    max-width: 1200px !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+
+    zoom: 100% !important;
+}
+/* FULL WHITE THEME - FINAL CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: wheat !important;
+    background-color: wheat!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.tvk-container {
+    background: wheat !important;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.complaint-page {
+    background: #ffffff !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    padding: 20px;
+}
+
+.complaint-form {
+    background: #ffffff !important;
+    width: 100% !important;
+    max-width: 550px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.complaint-form form {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+.complaint-form h2 {
+    color: #b91c1c;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.complaint-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.complaint-form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.complaint-form input,
+.complaint-form select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.photo-preview {
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.complaint-submit {
+    background: #d32f2f !important;
+    color: white !important;
+    padding: 14px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer;
+    width: 100% !important;
+    margin-top: 25px !important;
+}
+
+.complaint-submit:hover {
+    background: #b71c1c !important;
+}
+/* SUCCESS PAGE CSS */
+.success-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.success-box {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.success-image {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.success-box h2 {
+    color: #b91c1c;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.success-box h3 {
+    color: #222;
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.success-box p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: #b91c1c;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #991b1b;
+    transform: scale(1.05);
+}
+/* =========================
+   STATUS PAGE
+========================= */
+
+.status-container {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+
+
+/* HEADER */
+
+.status-header {
+    background: #b00000;
+    color: white;
+    padding: 18px 10px;
+    text-align: center;
+}
+
+.status-header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+/* SEARCH BOX */
+
+.status-search {
+    background: white;
+    margin: 30px 15px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.status-search h2 {
+    text-align: center;
+    color: #b00000;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+
+/* LABEL */
+
+.status-search label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* INPUT */
+
+.status-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.status-search input:focus {
+    border-color: #b00000;
+}
+
+
+/* SEARCH BUTTON */
+
+.status-search button {
+    width: 100%;
+    margin-top: 23px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #b00000;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status-search button:hover {
+    background: #8f0000;
+}
+
+
+/* COMPLAINT RESULT */
+
+.complaint-result {
+    background: white;
+    margin: 20px 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.complaint-result h2 {
+    text-align: center;
+    color: #b00000;
+    margin-top: 0;
+}
+
+.complaint-result p {
+    margin: 13px 0;
+    font-size: 15px;
+}
+
+
+/* STATUS */
+
+.status-green {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* NO RESULT */
+
+.no-result {
+    margin: 20px 15px;
+    padding: 15px;
+    background: #ffe5e5;
+    color: #b00000;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}

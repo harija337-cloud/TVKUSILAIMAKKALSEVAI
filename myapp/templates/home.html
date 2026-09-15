@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d90000">
+
+    <title>TVK - மக்கள் சேவை</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+
+<body>
+
+<div class="tvk-container">
+
+    <!-- HEADER -->
+    <header class="tvk-header">
+
+        <div class="logo-area">
+
+            <div class="logo-circle">
+                TVK
+            </div>
+
+            <h1>
+                <span>மக்கள் சேவை</span>
+            </h1>
+
+        </div>
+
+        <nav>
+
+            <a href="/">
+                🏠 முகப்பு பக்கம்
+            </a>
+
+            <a href="#">
+                🔔 அறிவிப்புகள்
+            </a>
+
+            <a href="#">
+                👤 உள்நுழைவு
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <h2>
+                உசிலம்பட்டி மக்களின் குறைகளை<br>
+                எளிதாக பதிவு செய்து தீர்வு பெறுங்கள்
+            </h2>
+
+
+            <!-- BUTTONS -->
+            <div class="hero-buttons">
+
+                <a href="/complaint/" class="complaint-btn">
+
+                    <span class="button-icon">
+                        📄
+                    </span>
+
+                    <span>
+                        உங்கள் புகார்<br>
+                        பதிவு செய்யவும்
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="/status/" class="status-btn">
+
+                    <span class="button-icon">
+                        🔍
+                    </span>
+
+                    <span>
+                        புகார் நிலையை<br>
+                        கண்காணிக்கவும்
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROUND IMAGE -->
+        <div class="tvk-image">
+
+            <img src="{% static 'vijay - copy.jpg' %}" alt="TVK">
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services">
+
+        <h2>எங்கள் சேவைகள்</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon yellow">
+                    ✓
+                </div>
+
+                <h3>பாதுகாப்பானது</h3>
+
+                <p>
+                    உங்கள் புகார் தகவல்கள்
+                    பாதுகாப்பாக இருக்கும்.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon red">
+                    ⚡
+                </div>
+
+                <h3>விரைவான செயலாக்கம்</h3>
+
+                <p>
+                    உங்கள் புகார் விரைவாக
+                    பரிசீலிக்கப்படும்.
+                </p>
+            </div>
+
+
+            <div class="service-card">
+                <div class="service-icon green">
+                    ₹
+                </div>
+
+                <h3>இலவச சேவை</h3>
+
+                <p>
+                    இந்த சேவை மக்களுக்காக
+                    இலவசமாக வழங்கப்படுகிறது.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM MESSAGE -->
+    <section class="bottom-message">
+
+        <h2>
+            உசிலம்பட்டி தொகுதி மக்களின்
+            சேவைக்காக ஒன்றிணைவோம்
+        </h2>
+
+        <p>
+            உங்கள் குறைகளை பதிவு செய்து
+            விரைவான தீர்வை பெறுங்கள்.
+        </p>
+
+    </section>
+
+
+</div>
+</script>
+</body>
+</html>

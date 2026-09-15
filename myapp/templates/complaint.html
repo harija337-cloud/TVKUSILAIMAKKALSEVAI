@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVK - மக்கள் சேவை</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<div class="tvk-container">
+
+    <!-- HEADER -->
+    <header class="tvk-header">
+
+        <div class="logo-area">
+
+            <div class="logo-circle">
+                TVK
+            </div>
+
+            <h1>
+                <span>மக்கள் சேவை</span>
+            </h1>
+
+        </div>
+
+        <nav>
+
+            <a href="/">
+                🏠 முகப்பு பக்கம்
+            </a>
+
+            <a href="#">
+                🔔 அறிவிப்புகள்
+            </a>
+
+            <a href="#">
+                👤 உள்நுழைவு
+            </a>
+
+        </nav>
+
+    </header>
+    <section class="complaint-page">
+        <div class="complaint-form">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <h2>உங்கள் புகாரை பதிவு செய்யலாம்</h2>
+                <p class="complaint-subtitle">உங்கள் குறையை பதிவு செய்து விரைவாக தீர்வு பெறுங்கள்</p>
+
+                <label>👤 உங்கள் பெயர்</label>
+                <input type="text" name="name" placeholder="உங்கள் பெயரை உள்ளிடவும்">
+
+                <label>📱 மொபைல் எண்</label>
+                <input type="tel" name="mobile" placeholder="மொபைல் எண்ணை உள்ளிடவும்">
+
+                <label>🏘️ உங்கள் ஊர்</label>
+                <input type="text" name="village" placeholder="ஊரின் பெயர்">
+
+                <label>📂 புகார் வகை</label>
+                <select name="category">
+                    <option value="">தேர்வு செய்யவும்</option>
+                    <option value="சாலை">🛣️ சாலை</option>
+                    <option value="குடிநீர்">💧 குடிநீர்</option>
+                    <option value="மின்சாரம்">⚡ மின்சாரம்</option>
+                    <option value="மற்றவை">📌 மற்றவை</option>
+                </select>
+
+                <label>📍 Location</label>
+                <input type="text" name="location" placeholder="இருப்பிடத்தை உள்ளிடவும்">
+
+                <label>📷 புகைப்படம்</label>
+                <input type="file" id="complaintPhoto" name="photo" accept="image/*" onchange="previewPhoto(event)">
+                <img id="photoPreview" class="photo-preview" style="display:none; width:150px; margin-top:10px;">
+
+                <label>📄 ஏற்கனவே உள்ள மனுவின் புகைப்படம்</label>
+                <input type="file" id="petitionPhoto" name="petition_photo" accept="image/*" onchange="previewPetition(event)">
+                <img id="petitionPreview" class="photo-preview" style="display:none; width:150px; margin-top:10px;">
+
+                <!-- SUBMIT BUTTON IPA FORM KULLA, ELLATHUKUM KEELA -->
+                <button type="submit" class="complaint-submit" style="margin-top:20px; width:100%;">📤 புகாரை சமர்ப்பிக்கவும்</button>
+
+            </form>
+        </div>
+    </section>
+
+<script>
+function previewPhoto(e){const f=e.target.files[0];const p=document.getElementById("photoPreview");if(f){p.src=URL.createObjectURL(f);p.style.display="block";}}
+function previewPetition(e){const f=e.target.files[0];const p=document.getElementById("petitionPreview");if(f){p.src=URL.createObjectURL(f);p.style.display="block";}}
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TVK - மனு நிலை</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <div class="status-container">
+
+        <!-- HEADER -->
+        <header class="status-header">
+            <h1>TVK - மனு நிலை</h1>
+        </header>
+
+
+        <!-- SEARCH PAGE -->
+        <div class="status-search">
+
+            <h2>புகார் நிலை காண</h2>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <!-- ஊர் -->
+                <label for="village">உங்கள் ஊர்</label>
+
+                <input
+                    type="text"
+                    id="village"
+                    name="village"
+                    placeholder="உங்கள் ஊர் பெயரை உள்ளிடவும்"
+                    required
+                >
+
+
+                <!-- MOBILE -->
+                <label for="mobile">மொபைல் எண்</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="10 இலக்க மொபைல் எண்"
+                    maxlength="10"
+                    required
+                >
+
+
+                <!-- SEARCH -->
+                <button type="submit">
+                    🔍 தேடுக
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- SEARCH RESULT -->
+        {% if complaint %}
+
+        <div class="complaint-result">
+
+            <h2>உங்கள் புகார்</h2>
+
+            <p>
+                <strong>பெயர்:</strong>
+                {{ complaint.name }}
+            </p>
+
+            <p>
+                <strong>ஊர்:</strong>
+                {{ complaint.village }}
+            </p>
+
+            <p>
+                <strong>மொபைல்:</strong>
+                {{ complaint.mobile }}
+            </p>
+
+            <p>
+                <strong>புகார் வகை:</strong>
+                {{ complaint.category }}
+            </p>
+
+            <p>
+                <strong>இடம்:</strong>
+                {{ complaint.location }}
+            </p>
+
+            <p>
+                <strong>நிலை:</strong>
+                <span class="status-green">
+                    {{ complaint.status }}
+                </span>
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- NO RESULT -->
+        {% if searched and not complaint %}
+
+        <div class="no-result">
+            ❌ இந்த ஊர் மற்றும் மொபைல் எண்ணில்
+            புகார் எதுவும் கிடைக்கவில்லை.
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
+    
+
+       

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>புகார் பதிவு - நன்றி</title>
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box;}
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffe6e6;
+            font-family: Arial, sans-serif;
+        }
+        .box{
+            text-align: center;
+            padding: 20px;
+        }
+        .box img{
+            width: 220px;
+            border-radius: 15px;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+        .box h2{
+            color: #b91c1c;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .box h3{
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .box p{
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .back{
+            display: inline-block;
+            margin-top: 25px;
+            background: #b91c1c;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="{% static 'vanakkam.jpg' %}" alt="வணக்கம்">
+        <h2>🙏 வணக்கம்!</h2>
+        <h3>உங்கள் புகார் பதிவு செய்யப்பட்டுள்ளது</h3>
+        <p>உங்கள் புகார் வெற்றிகரமாக பதிவு செய்யப்பட்டுள்ளது.</p>
+        <p>விரைவில் பரிசீலனை செய்யப்பட்டு<br>தேவையான நடவடிக்கை எடுக்கப்படும்.</p>
+        <a href="/complaint/" class="back">← Back</a>
+    </div>
+</body>
+</html>
